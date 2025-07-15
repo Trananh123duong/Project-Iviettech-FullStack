@@ -1,33 +1,40 @@
-import { FaFire, FaHistory, FaHome, FaTags } from "react-icons/fa";
-import { FaCaretDown } from "react-icons/fa6";
-import { Link } from 'react-router-dom';
-import styles from './styles.module.css';
+import * as S from './styles';
 
 const Navbar = () => {
   return (
-    <div className={styles['menu-top']}>
-      <ul className={styles.menu}>
-        <li>
-          <Link className={styles['menu-action']}><FaHome /> HOME</Link>
-        </li>
-        <li>
-          <Link className={styles['menu-action']}><FaFire /> HOT</Link>
-        </li>
-        <li>
-          <Link className={styles['menu-action']}><FaTags /> THỂ LOẠI <FaCaretDown /></Link>
-        </li>
-        <li>
-          <Link className={styles['menu-action']}>LỊCH SỬ <FaHistory /></Link>
-        </li>
-        <li>
-          <Link className={styles['menu-action']}>THEO DÕI</Link>
-        </li>
-        <li>
-          <Link className={styles['menu-action']}>XẾP HẠNG <FaCaretDown /></Link>
-        </li>
-      </ul>
-    </div>
-  )
-}
+    <S.MainNav>
+      <nav>
+        <S.MainList>
+          <li>
+            <S.ItemLink to="">
+              <i class="icon-home fas fa-home"></i>
+            </S.ItemLink>
+          </li>
+          <li>
+            <S.ItemLink to="">
+              HOT
+            </S.ItemLink>
+          </li>
+          <li>
+            <S.ItemLink to="">
+              THEO DÕI
+            </S.ItemLink>
+          </li>
+          <li>
+            <S.ItemLink to="">
+              LỊCH SỬ
+            </S.ItemLink>
+          </li>
+          
+          <li>
+            <S.ItemLink to="">
+              TÌM TRUYỆN
+            </S.ItemLink>
+          </li>
+        </S.MainList>
+      </nav>
+    </S.MainNav>
+  );
+};
 
-export default Navbar
+export default Navbar;

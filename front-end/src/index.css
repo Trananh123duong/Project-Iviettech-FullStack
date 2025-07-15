@@ -1,6 +1,9 @@
 * {
-  font-family: averta_Regular,sans-serif;
-  padding: 0;
+  font-family: Tahoma,sans-serif,Helvetica,Arial;
+  font-weight: 400;
+  font-size: 14px;
+  /* background-color: #ebebeb; */
   margin: 0;
-  box-sizing: border-box;
+  bottom: 0;
+  overflow-x: hidden;
 }
