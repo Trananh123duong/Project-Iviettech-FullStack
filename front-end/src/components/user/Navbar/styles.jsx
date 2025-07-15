@@ -4,18 +4,15 @@ import styled from 'styled-components'
 export const MainNav = styled.div`
   width: 100%;
   background-color: rgb(228,228,228);
-
-  nav {
-    max-width: 1000px;
-    width: 100%;
-    margin: 0 auto;
-  }
 `
 
 export const MainList = styled.ul`
   display: flex;
   align-items: center;
   height: 100%;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
 
   & > li {
     font-size: 1.6rem;
@@ -25,12 +22,17 @@ export const MainList = styled.ul`
     height: 100%;
     position: relative;
   }
+
+  & > li:first-child {
+    border-left: none;
+  }
 `
 
 export const ItemLink = styled(Link)`
   color: black;
   padding: 10px 20px;
   display: block;
+  text-decoration: none;
 
   &:hover {
     color: violet;
@@ -38,71 +40,37 @@ export const ItemLink = styled(Link)`
   }
 `
 
-export const CategoryList = styled.ul`
-  /* min-width: 600px;
-  z-index: 1000;
-  background-color: white;
+export const Categories = styled.ul`
   position: absolute;
   top: 100%;
-  border: 2px solid #ccc;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  display: none;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: -10px;
-    left: -1px;
-    right: 0;
-    width: 100%;
-    height: 24px;
-    background-color: transparent;
-  } */
-`
-
-export const ItemCategory = styled.div`
-  &:hover ${CategoryList} {
-    display: block;
-  }
-`
-
-export const CategoryItem = styled.li`
-  font-size: 1.8rem;
-  padding: 10px 20px;
-
-  &:first-child {
-    margin-top: 10px;
-  }
-
-  &:last-child {
-    margin-bottom: 10px;
-  }
-`
-
-export const ItemCategoryLink = styled(Link)`
-  &:hover {
-    color: violet;
-  }
-`
-
-export const RankList = styled.ul`
-  display: none;
-  min-width: 340px;
-  z-index: 1000;
+  left: 0;
   background-color: white;
-  position: absolute;
-  top: 100%;
-  border: 2px solid #ccc;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-`
+  border: 1px solid #ccc;
+  display: none;
+  z-index: 9999;
+  max-height: 300px;
+  overflow-y: auto;
+  min-width: 200px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 0;
+  margin: 0;
 
-export const ItemRank = styled.li`
-  &:hover {
-    background-color: white;
-    color: violet;
+  & > li {
+    list-style: none;
+    padding: 10px;
+    white-space: nowrap;
+    cursor: pointer;
   }
 
-  &:hover ${RankList} {
+  & > li:hover {
+    background-color: #eee;
+  }
+`
+
+export const ItemCategories = styled.li`
+  position: relative;
+
+  &:hover ${Categories} {
     display: block;
   }
 `

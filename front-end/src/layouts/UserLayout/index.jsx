@@ -2,15 +2,18 @@ import { Outlet } from 'react-router-dom'
 import Footer from '../../components/user/Footer'
 import Header from '../../components/user/Header'
 import Navbar from '../../components/user/Navbar'
-import Sliderbar from '../../components/user/Sliderbar'
+import * as S from './styles'
 
 const UserLayout = () => {
   return (
     <>
       <Header />
       <Navbar />
-      <Sliderbar />
-      <Outlet />
+      <S.Main>
+        <S.MainContainer>
+          <Outlet />
+        </S.MainContainer>
+      </S.Main>
       <Footer />
     </>
   )

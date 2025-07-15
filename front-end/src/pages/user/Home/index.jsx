@@ -1,10 +1,8 @@
-import React from 'react'
+import Sliderbar from '../../../components/user/Sliderbar'
 
 const Home = () => {
   return (
-    <div>
-      <h1>Home</h1>
-    </div>
+    <Sliderbar />
   )
 }
 

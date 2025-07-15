@@ -26,15 +26,20 @@ const Sliderbar = () => {
   };
   
   return (
-    <Slider {...settings}>
-      {comics.map((comic, index) => (
-        <S.ComicCard key={index}>
-          <img src={comic.image} alt={comic.title} />
-          <div className="title">{comic.title}</div>
-          <div className="chapter-time">Chapter {comic.chapter} – {comic.time}</div>
-        </S.ComicCard>
-      ))}
-    </Slider>
+    <>
+      <S.PageTitle>
+        Truyện đề cử <i class="fa-solid fa-angle-right"></i>
+      </S.PageTitle>
+      <Slider {...settings}>
+        {comics.map((comic, index) => (
+          <S.ComicCard key={index}>
+            <img src={comic.image} alt={comic.title} />
+            <div className="title">{comic.title}</div>
+            <div className="chapter-time">Chapter {comic.chapter} – {comic.time}</div>
+          </S.ComicCard>
+        ))}
+      </Slider>
+    </>
   );
 }
 
