@@ -11,4 +11,5 @@ export const MainContainer = styled.div`
   margin: 0 auto;
   padding: 10px;
   background-color: white;
+  min-height: calc(100% - 200px - 55px - 43px);
 `

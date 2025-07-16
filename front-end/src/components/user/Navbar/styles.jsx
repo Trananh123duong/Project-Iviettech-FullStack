@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 export const MainNav = styled.div`
   width: 100%;
+  height: 43px;
   background-color: rgb(228,228,228);
 `
 
